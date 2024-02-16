@@ -38,8 +38,8 @@
                 <!-- Keyboard -->
                 <div>
                     <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd id="w" class="kbd">w</kbd>
                         <kbd id="q" class="kbd">q</kbd>
+                        <kbd id="w" class="kbd">w</kbd>
                         <kbd id="e" class="kbd">e</kbd>
                         <kbd id="r" class="kbd">r</kbd>
                         <kbd id="t" class="kbd">t</kbd>
@@ -76,12 +76,12 @@
                     <button class="btn bg-purple-500 text-white border-none rounded-full">
                         Life
                         <img src="images/heart.svg" alt="">
-                        <span>1</span>
+                        <span id="current-life">5</span>
                       </button>
                     <button class="btn bg-purple-800 text-white border-none rounded-full">
                         Score
                         <img src="images/dollar.svg" alt="">
-                        <span>0</span>
+                        <span id="current-score">0</span>
                       </button>
                 </div>
             </div>
@@ -90,13 +90,14 @@
         <!-- Play Ground End -->
 
         <!--Final Score Start-->
-        <section class="score flex justify-center items-center min-h-screen hidden">
+        <section id="final-score" class="flex justify-center items-center min-h-screen hidden">
             <div class="text-white text-center space-y-4 bg-[#FFFFFF33] p-6 rounded-xl">
+                <h4 class="text-4xl">Game Over!</h4>
                 <h1 class="text-7xl">
                     <span class="font-bold">Score:</span>
-                    <span>14</span>
+                    <span id="last-score">14</span>
                 </h1>
-                <button class="btn">Play Again</button>
+                <button onclick="play()" class="btn">Play Again</button>
                 <p>Practice will make you a Pro</p>
             </div>
         </section>
